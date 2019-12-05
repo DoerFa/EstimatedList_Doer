@@ -6,9 +6,10 @@
 //  Copyright © 2019 杨俊杰. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-let longString = "iOS  swift Android Java Vue iOS  swift Android Java Vue iOS  swift Android Java Vue iOS  swift Android Java Vue iOS  swift Android Java Vue iOS  swift Android Java Vue iOS  swift Android Java Vue iOS  swift Android Java Vue iOS  swift Android Java Vue "
+let kScreenWidth = UIScreen.main.bounds.size.width
+let kScreenHeight = UIScreen.main.bounds.size.height
 
-let sortString = "dwnadkjnwakjdnwakjdnajkwdnkwjndkjandwwjkandjwkand"
+let collecWidth = (kScreenWidth - 2)/2
 

@@ -36,18 +36,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        switch indexPath.row {
-//        case 0:
-//
-//            break
-//        case 1:
-//
-//            break
-//        default:
-//            break
-//        }
-        self.navigationController?.pushViewController(self.controllerArray[0], animated: true)
-        
+        self.navigationController?.pushViewController(self.controllerArray[indexPath.row], animated: true)
     }
     
     
@@ -66,9 +55,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         return estabVc
     }()
     
+    lazy var esCollecVc:EstimatedCollectionVC = {
+        let esCollecVc = EstimatedCollectionVC()
+        return esCollecVc
+    }()
+    
     
     lazy var controllerArray:Array = {
-        return [self.esTableVc]
+        return [self.esTableVc,self.esCollecVc]
     }()
 
 }
