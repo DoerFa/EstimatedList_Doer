@@ -13,3 +13,10 @@ let kScreenHeight = UIScreen.main.bounds.size.height
 
 let collecWidth = (kScreenWidth - 2)/2
 
+func print<T>(message:T, file:String = #file, line:Int = #line) {
+    #if DEBUG
+    let fileName = (file as NSString).lastPathComponent
+    
+    print("\(fileName) : [\(line)] - \(message)")
+    #endif
+}
